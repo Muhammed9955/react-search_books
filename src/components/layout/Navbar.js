@@ -17,7 +17,7 @@ const Navbar = () => {
       <Link to="/favoriteList">
         <span className="navbar-brand mb-0 h1  fas fa-bookmark">
           {' '}
-          My Favorite List
+         Favorite List
         </span>
       </Link>
     </nav>

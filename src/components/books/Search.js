@@ -7,11 +7,12 @@ const Search = () => {
   const [userInput, setUserInput] = useState('');
   const [sort, setSort] = useState('');
   const { books_list, fav_books_list } = state;
+  const APIKey = 'AIzaSyAASfFkO2QNBCRTjrtMF2ZUGhLJEgATx6g'
 
   const findBooks = e => {
     e.preventDefault();
     axios
-      .get(`https://www.googleapis.com/books/v1/volumes?q=${userInput}`)
+      .get(` https://www.googleapis.com/books/v1/volumes?q=${userInput}&key=${APIKey}&maxResults=40&start-index=21`)
 
       .then(res => {
         setState({

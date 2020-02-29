@@ -12,8 +12,9 @@ export function ContextController({ children }) {
   const [state, setState] = useState(intialState);
   useEffect(async () => {
     try {
+      const APIKey = 'AIzaSyAASfFkO2QNBCRTjrtMF2ZUGhLJEgATx6g'
       const res = await axios.get(
-        `https://www.googleapis.com/books/v1/volumes?q=harry+potter`
+        `https://www.googleapis.com/books/v1/volumes?q=harry+potter&key=${APIKey}&maxResults=20`
       );
 
       setState({
@@ -61,6 +62,12 @@ export function ContextController({ children }) {
       fav_books_list: [...targetBook2]
     });
   };
+
+  //downloadBook 
+  // const downloadBook = BookID => {
+  // location:      
+
+  // }
 
   //test
   console.log('fav_books_list', fav_books_list);
